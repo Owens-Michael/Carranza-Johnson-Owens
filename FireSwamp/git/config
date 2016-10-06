@@ -1,0 +1,1 @@
+[pack] buildbitmaps = false [core] repositoryformatversion = 0 filemode = true logallrefupdates = true precomposeunicode = true bare = false [remote "origin"] url = https://Owens-Michael@github.com/Owens-Michael/Carranza-Johnson-Owens.git fetch = +refs/heads/master:refs/remotes/origin/master
