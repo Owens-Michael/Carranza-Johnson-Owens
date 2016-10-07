@@ -60,10 +60,7 @@ public class Game implements Serializable{
         if (!Objects.equals(this.totalTime, other.totalTime)) {
             return false;
         }
-        if (!Objects.equals(this.noPeople, other.noPeople)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.noPeople, other.noPeople);
     }
 
     @Override
