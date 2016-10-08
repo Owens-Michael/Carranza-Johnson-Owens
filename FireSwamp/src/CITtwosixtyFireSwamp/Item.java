@@ -17,7 +17,7 @@ public class Item implements Serializable{
     
     private String inventoryType;
     private Double quantityInStock;
-    private Double requireAmount;
+   
 
     public Item() {
     }
@@ -30,10 +30,6 @@ public class Item implements Serializable{
         return quantityInStock;
     }
 
-    public Double getRequireAmount() {
-        return requireAmount;
-    }
-
     public void setInventoryType(String inventoryType) {
         this.inventoryType = inventoryType;
     }
@@ -42,16 +38,14 @@ public class Item implements Serializable{
         this.quantityInStock = quantityInStock;
     }
 
-    public void setRequireAmount(Double requireAmount) {
-        this.requireAmount = requireAmount;
-    }
+ 
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 37 * hash + Objects.hashCode(this.inventoryType);
         hash = 37 * hash + Objects.hashCode(this.quantityInStock);
-        hash = 37 * hash + Objects.hashCode(this.requireAmount);
+       
         return hash;
     }
 
@@ -70,15 +64,12 @@ public class Item implements Serializable{
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {
             return false;
         }
-        if (!Objects.equals(this.quantityInStock, other.quantityInStock)) {
-            return false;
-        }
-        return Objects.equals(this.requireAmount, other.requireAmount);
+        return Objects.equals(this.quantityInStock, other.quantityInStock);
     }
-
+    
     @Override
     public String toString() {
-        return "Item{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", requireAmount=" + requireAmount + '}';
+        return "Item{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock +'}';
     }
             
     
