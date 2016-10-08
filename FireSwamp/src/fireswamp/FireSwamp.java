@@ -5,6 +5,12 @@
  */
 package fireswamp;
 import CITtwosixtyFireSwamp.Character;
+import CITtwosixtyFireSwamp.FlameSpurtTypeScene;
+import CITtwosixtyFireSwamp.LightningSandsTypeScene;
+import CITtwosixtyFireSwamp.Game;
+import CITtwosixtyFireSwamp.Item;
+import CITtwosixtyFireSwamp.Map;
+import CITtwosixtyFireSwamp.Scene;
 /**
  *
  * @author kellyjohnson
