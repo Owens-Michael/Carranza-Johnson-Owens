@@ -5,12 +5,14 @@
  */
 package fireswamp;
 import CITtwosixtyFireSwamp.Character;
-import CITtwosixtyFireSwamp.FlameSpurtTypeScene;
-import CITtwosixtyFireSwamp.LightningSandsTypeScene;
-import CITtwosixtyFireSwamp.Game;
-import CITtwosixtyFireSwamp.Item;
-import CITtwosixtyFireSwamp.Map;
-import CITtwosixtyFireSwamp.Scene;
+/* I am commenting these out due to netbeans saying they are unused. Perhaps they will be useful in the future so I am keeping the code
+*import CITtwosixtyFireSwamp.FlameSpurtTypeScene;
+*import CITtwosixtyFireSwamp.LightningSandsTypeScene;
+*import CITtwosixtyFireSwamp.Game;
+*import CITtwosixtyFireSwamp.Item;
+*import CITtwosixtyFireSwamp.Map;
+*import CITtwosixtyFireSwamp.Scene;
+*/
 /**
  *
  * @author kellyjohnson
