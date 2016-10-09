@@ -31,7 +31,21 @@ characterOne.setCoordinates(87.00);
 String characterInfo= characterOne.toString();
 System.out.println(characterInfo);
 
-FlameSpurtTypeScene FlameSpurtTypeSceneOne = 
+FlameSpurtTypeScene flameSpurtTypeSceneOne = new FlameSpurtTypeScene();
+flameSpurtTypeSceneOne.setOutcomeTrue("True");
+String flameSpurtTypeSceneInfo= flameSpurtTypeSceneOne.toString();
+System.out.println(flameSpurtTypeSceneInfo);
+
+Scene sceneOne = new Scene();
+sceneOne.setDescription("Tarpits");
+String sceneInfo= sceneOne.toString();
+System.out.println(sceneInfo);
+
+
+LightningSandsTypeScene lightningSandsTypeSceneOne = new LightningSandsTypeScene();
+lightningSandsTypeSceneOne.setOutcomeTrue("true");
+String lightningSandsTypeSceneInfo= lightningSandsTypeSceneOne.toString();
+System.out.println(lightningSandsTypeSceneInfo);
     }
     
 }
