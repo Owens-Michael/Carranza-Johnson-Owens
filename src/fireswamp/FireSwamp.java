@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package fireswamp;
-import byui.cit260.fireswamp.Character;
+import byui.cit260.fireswamp.model.Character;
 /**
  *
  * @author kellyjohnson
