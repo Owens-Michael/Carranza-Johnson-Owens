@@ -4,14 +4,13 @@
  * and open the template in the editor.
  */
 package fireswamp;
-import CITtwosixtyFireSwamp.Character;
-import CITtwosixtyFireSwamp.FlameSpurtTypeScene;
-
-import CITtwosixtyFireSwamp.LightningSandsTypeScene;
-import CITtwosixtyFireSwamp.Game;
-import CITtwosixtyFireSwamp.Item;
-import CITtwosixtyFireSwamp.Map;
-import CITtwosixtyFireSwamp.Scene;
+import byui.cit260.fireswamp.Character;
+import byui.cit260.fireswamp.FlameSpurtTypeScene;
+import byui.cit260.fireswamp.LightningSandsTypeScene;
+import byui.cit260.fireswamp.Game;
+import byui.cit260.fireswamp.Item;
+import byui.cit260.fireswamp.Map;
+import byui.cit260.fireswamp.Scene;
 
 /**
  *
