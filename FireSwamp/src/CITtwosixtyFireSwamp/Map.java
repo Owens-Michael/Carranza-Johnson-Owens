@@ -14,33 +14,37 @@ import java.util.Objects;
  */
 public class Map implements Serializable{
     
-    private Double rowCount;
-    private Double columnCount;
+    private String rowCount;
+    private String columnCount;
 
     public Map() {
     }
 
-    public Double getRowCount() {
+    /**
+     *
+     * @return
+     */
+    public String getRowCount() {
         return rowCount;
     }
 
-    public Double getColumnCount() {
+    public String getColumnCount() {
         return columnCount;
     }
 
-    public void setRowCount(Double rowCount) {
+    public void setRowCount(String rowCount) {
         this.rowCount = rowCount;
     }
 
-    public void setColumnCount(Double columnCount) {
+    public void setColumnCount(String columnCount) {
         this.columnCount = columnCount;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.rowCount);
-        hash = 79 * hash + Objects.hashCode(this.columnCount);
+        hash = 23 * hash + Objects.hashCode(this.rowCount);
+        hash = 23 * hash + Objects.hashCode(this.columnCount);
         return hash;
     }
 
@@ -59,16 +63,13 @@ public class Map implements Serializable{
         if (!Objects.equals(this.rowCount, other.rowCount)) {
             return false;
         }
-        if (!Objects.equals(this.columnCount, other.columnCount)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.columnCount, other.columnCount);  
     }
 
     @Override
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
-    
-}
+
+ 
+}    

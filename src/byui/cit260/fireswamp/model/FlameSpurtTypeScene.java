@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CITtwosixtyFireSwamp;
+package byui.cit260.fireswamp.model;
 
 /**
  *
  * @author kellyjohnson
  */
-public class LightningSandsTypeScene {
+public class FlameSpurtTypeScene {
     
 }
