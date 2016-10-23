@@ -11,15 +11,18 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author mnowe
+ * @author kellyjohnson
  */
-public class LightningSandControlTest {
+public class GiantReachControlTest {
     
-    public LightningSandControlTest() {
+    /**
+     *
+     */
+    public GiantReachControlTest() {
     }
 
     /**
-     * Test of CalcCircleSize method, of class LightningSandControl.
+     * Test of CalcCircleSize method, of class GiantReachControl.
      */
     @Test
     public void testCalcCircleSize() {
@@ -27,7 +30,7 @@ public class LightningSandControlTest {
         
         double diameter = 8.0;
         double pi = PI;
-        LightningSandControl instance = new LightningSandControl();
+        GiantReachControl instance = new GiantReachControl();
         double expResult = 25.13;
         double result = instance.CalcCircleSize(diameter, pi);
         assertEquals(expResult, result, 0.01);
