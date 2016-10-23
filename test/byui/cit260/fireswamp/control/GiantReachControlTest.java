@@ -15,9 +15,6 @@ import static org.junit.Assert.*;
  */
 public class GiantReachControlTest {
     
-    /**
-     *
-     */
     public GiantReachControlTest() {
     }
 
@@ -28,17 +25,17 @@ public class GiantReachControlTest {
     public void testCalcCircleSize() {
         System.out.println("CalcCircleSize");
         
-        double diameter = 8.0;
+        double diameter = 4.0;
         double pi = PI;
         GiantReachControl instance = new GiantReachControl();
-        double expResult = 25.13;
+        double expResult = 12.57;
         double result = instance.CalcCircleSize(diameter, pi);
         assertEquals(expResult, result, 0.01);
         
     
         System.out.println("\tTest 2");
     
-        diameter = -8.0;
+        diameter = -4.0;
         
         pi = PI;
         
@@ -50,7 +47,7 @@ public class GiantReachControlTest {
     
         System.out.println("\tTest 3");
     
-        diameter = -9.0;
+        diameter = 0.0;
         
         pi = PI;
         
@@ -66,7 +63,7 @@ public class GiantReachControlTest {
         
         pi = PI;
         
-        expResult = 127.23;
+        expResult = 56.55;
         
         result = instance.CalcCircleSize(diameter, pi);
         assertEquals(expResult, result, 0.01);
@@ -74,11 +71,11 @@ public class GiantReachControlTest {
     
         System.out.println("\tTest 5");
     
-        diameter = 0.0;
+        diameter = 10.0;
         
         pi = PI;
         
-        expResult = -1.0;
+        expResult = 62.83;
         
         result = instance.CalcCircleSize(diameter, pi);
         assertEquals(expResult, result, 0.01);
@@ -86,11 +83,11 @@ public class GiantReachControlTest {
     
         System.out.println("\tTest 6");
     
-        diameter = 20.0;
+        diameter = 90.0;
         
         pi = PI;
         
-        expResult = 157.07;
+        expResult = -1;
         
         result = instance.CalcCircleSize(diameter, pi);
         assertEquals(expResult, result, 0.01);

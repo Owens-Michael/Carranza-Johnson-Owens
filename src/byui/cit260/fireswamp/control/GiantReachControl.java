@@ -11,15 +11,15 @@ import java.io.Serializable;
  *
  * @author mnowe
  */
-public class LightningSandControl implements Serializable {
+public class GiantReachControl implements Serializable {
     
     public double CalcCircleSize( double diameter, double pi) {
         
-    if (diameter <= 0) {  
+    if (diameter <= 5) {  
             return -1;
     }
     
-    if (diameter > 20) { 
+    if (diameter > 30) { 
             return -1;
     }
     
