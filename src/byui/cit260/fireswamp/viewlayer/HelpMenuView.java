@@ -53,15 +53,7 @@ public class HelpMenuView {
                 + "\nR - Return to game"
                 + "\n-----------------";
     }
-   private void displayMainMenuView() {
-        System.out.println("\n============="
-        + "\n Welcome to the game " + character.getName()
-        + "\n We hope you have a lot of fun!"
-        + "\n================"
-        );
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.displayMainMenuView();
-    }
+   
     
 }
 
