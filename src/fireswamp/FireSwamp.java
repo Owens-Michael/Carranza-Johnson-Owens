@@ -5,6 +5,7 @@
  */
 package fireswamp;
 import byui.cit260.fireswamp.model.Character;
+import byui.cit260.fireswamp.viewlayer.WelcomeView;
 /**
  *
  * @author kellyjohnson
@@ -16,12 +17,8 @@ public class FireSwamp {
      */
     public static void main(String[] args) {
 
-Character characterOne= new Character();  
-characterOne.setName("Dayana");
-characterOne.setDescription("collegeStudent");
-characterOne.setCoordinates(87.00);
-String characterInfo= characterOne.toString();
-System.out.println(characterInfo);
+    WelcomeView welcomeView= new WelcomeView();
+    welcomeView.displayWelcomView();
     }
     
 }
