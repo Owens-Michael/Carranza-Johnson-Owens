@@ -5,6 +5,10 @@
  */
 package byui.cit260.fireswamp.viewlayer;
 
+import java.util.Scanner;
+import byui.cit260.fireswamp.model.Character;
+import byui.cit260.fireswamp.control.GameControl;
+
 /**
  *
  * @author kellyjohnson
@@ -35,25 +39,61 @@ public class StartProgramView {
         boolean done = false;
     
         do {
-            String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q"))
+            String charactersName = this.getCharactersName();
+            if (charactersName.toUpperCase().equals("Q"))
                 return;
             
             
-            done = this.doAction(playersName);
+            done = this.doAction(charactersName);
             
         } while (!done);
             
     }
 
-    private String getPlayersName() {
-        System.out.println("\n*** getPlayersName() called ***");
-        return "Joe";
+    private String getCharactersName() {
+        
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid) {
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() < 1) {
+                System.out.println("\nInvlaid value: can not be blank");
+                continue;
+            }
+            break;
+        }
+        return value;
     }
 
-    private boolean doAction(String playersName) {
-       System.out.println("\n*** doAction() called ***");
+    private boolean doAction(String name) {
+        if (name.length() <2){
+            System.out.println("\nInvalid players name: " + "The name must be greater than one character in length");
+            return false;
+        }
+        Character character = GameControl.createCharacter(name);
+        if (character == null {
+            System.out.println("\n*** doAction() called ***");
+            return false;
+        }
+       this.displayNextView(character);
        return true;
+    }
+
+    private void displayNextView(Character character) {
+        System.out.println("\n==============="
+        + "\n Welcome to the game "
+        + "\n We hope you have a lot of fun!"
+        + "\n=============");
+        
+        MainMenuView mainMenuView = new MainMenuView()
+        mainMenuView.displayMainMenuView();
+
     }
     
     
