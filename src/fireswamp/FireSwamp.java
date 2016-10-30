@@ -5,7 +5,7 @@
  */
 package fireswamp;
 import byui.cit260.fireswamp.model.Character;
-import byui.cit260.fireswamp.viewlayer.WelcomeView;
+import byui.cit260.fireswamp.viewlayer.StartProgramView;
 /**
  *
  * @author kellyjohnson
@@ -16,9 +16,9 @@ public class FireSwamp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
 
-    WelcomeView welcomeView= new WelcomeView();
-    welcomeView.displayWelcomView();
     }
     
 }
