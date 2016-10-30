@@ -5,11 +5,19 @@
  */
 package byui.cit260.fireswamp.viewlayer;
 import byui.cit260.fireswamp.model.Character;
+import byui.cit260.fireswamp.control.GameControl;
+import byui.cit260.fireswamp.viewlayer.GameMenuView;
 /**
  *
  * @author kellyjohnson
  */
 public class MainMenuView {
+                private void startNewGame() {
+                    GameControl.createNewGame(FireSwamp.getCharacter());
+    
+     GameMenuView gameMenu = new GameMenuView();
+     gameMenu.displayMenu();
+}
     public void displayMainMenuView() {
         boolean done = false;
         do {

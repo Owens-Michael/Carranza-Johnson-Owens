@@ -84,7 +84,25 @@ public class StartProgramView {
        this.displayNextView(character);
        return true;
     }
-
+public boolean doAction(String choice) {
+    choice = choice.toUpperCase();
+    switch (choice) {
+        case "N":
+            break;
+        case "G":
+            this.startExistingGame();
+            break;
+        case "H":
+            this.displayHelpMenu();
+            break;
+        case "S":
+            this.saveGame();
+        default:
+            system.out.println("\n*** Invalid selection *** Try again***");
+            break;
+    }
+    return false;
+}
     private void displayNextView(Character character) {
         System.out.println("\n==============="
         + "\n Welcome to the game "
