@@ -5,61 +5,62 @@
  */
 package byui.cit260.fireswamp.viewlayer;
 
-
 import byui.cit260.fireswamp.model.Character;
 import byui.cit260.fireswamp.viewlayer.HelpMenuView;
 import byui.cit260.fireswamp.control.GameControl;
 import byui.cit260.fireswamp.model.Scene;
+
 /**
  *
  * @author dayanacarranza
  */
 public class InventoryManagementView {
-    
-    public void displayInventoryManagementView(){
+
+    public void displayInventoryManagementView() {
         boolean done = false;
         do {
-            
+
             String inventoryOption = this.getInventoryOption();
-            if (inventoryOption.toUpperCase().equals("Q"))
-                    return;
-            
+            if (inventoryOption.toUpperCase().equals("Q")) {
+                return;
+            }
+
             done = this.doAction(inventoryOption);
-        }while (!done);
-        
+        } while (!done);
+
     }
-    private void displayBanner(){
+
+    private void displayBanner() {
         System.out.println(
-        "\n Hear Ye Hear Ye The banner of answers");
-        
+                "\n Hear Ye Hear Ye The banner of answers");
+
     }
-    public boolean doAction(String InventoryOption){
+
+    public boolean doAction(String InventoryOption) {
         choice = choice.toUpperCase();
-       switch(choice){
-           case "L":
+        switch (choice) {
+            case "L":
                 this.lookingForItems();
                 break;
-           case "G":
-               this.gettingItems();
-               break;
-           case "U":
-               this.usingItems();
-               break;
-           case "B":
+            case "G":
+                this.gettingItems();
+                break;
+            case "U":
+                this.usingItems();
+                break;
+            case "B":
                 this.returnExistingGame();
                 break;
-       }
-       return false;
-       
+        }
+        return false;
+
     }
-private void displayNextView(Character character) {
-    System.out.println("\n Management your invemtory");
-    
-    MainMenuView mainMenuView = new MainMenuView();
-    
-    mainMenuView.displayMainMenuView();
-            
-}   
 
+    private void displayNextView(Character character) {
+        System.out.println("\n Management your invemtory");
 
-    
+        MainMenuView mainMenuView = new MainMenuView();
+
+        mainMenuView.displayMainMenuView();
+
+    }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.fireswamp.viewlayer;
+
 import byui.cit260.fireswamp.model.Character;
 import byui.cit260.fireswamp.viewlayer.GameMenuView;
 import byui.cit260.fireswamp.control.GameControl;
@@ -13,22 +14,25 @@ import byui.cit260.fireswamp.control.GameControl;
  * @author kellyjohnson
  */
 public class HelpMenuView {
-               private void startNewGame() {
-                    GameControl.createNewGame(FireSwamp.getCharacter());
-    
-     GameMenuView gameMenu = new GameMenuView();
-     gameMenu.displayMenu();
-}
+
+    private void startNewGame() {
+        GameControl.createNewGame(FireSwamp.getCharacter());
+
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }
+
     public void displayMainMenuView() {
         boolean done = false;
         do {
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
+            if (menuOption.toUpperCase().equals("Q")) {
                 return;
-            
+            }
+
             done = this.doAction(menuOption);
         } while (!done);
-        }
+    }
 
     private String getMenuOption() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -37,9 +41,9 @@ public class HelpMenuView {
     private boolean doAction(String menuOption) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    }
+}
 
-    private String menu;
+private String menu;
     
     public MainMenuView() {
         this.menu = "\n"
@@ -56,4 +60,3 @@ public class HelpMenuView {
    
     
 }
-

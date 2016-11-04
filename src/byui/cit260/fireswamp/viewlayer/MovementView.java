@@ -5,7 +5,6 @@
  */
 package byui.cit260.fireswamp.viewlayer;
 
-
 import byui.cit260.fireswamp.model.Character;
 import byui.cit260.fireswamp.viewlayer.HelpMenuView;
 import byui.cit260.fireswamp.control.GameControl;
@@ -16,53 +15,54 @@ import byui.cit260.fireswamp.control.GameControl;
  */
 public class MovementView {
 
-
-
-
     public void MovementView() {
-        
+
         boolean done = false;
-        
+
         do {
             String movementOption = this.getMovementOption();
-            if(movementOption.toUpperCase().equals("Q"))
+            if (movementOption.toUpperCase().equals("Q")) {
                 return;
-            
-          done = this.doAction(movementOption);
-          
-        } while(!done);
-       
+            }
+
+            done = this.doAction(movementOption);
+
+        } while (!done);
+
     }
-    private void displayBanner(){
+
+    private void displayBanner() {
         System.out.println(
-        "\n There is 5 option for you to move. E = East, N = North, W = West, S = South, and B = return. ");
-       
+                "\n There is 5 option for you to move. E = East, N = North, W = West, S = South, and B = return. ");
+
     }
-    public boolean doAction(String movementOption){
+
+    public boolean doAction(String movementOption) {
         choice = choice.topUpperCase();
-       switch (choice) {
-         case "E":
-             this.MoveEast();
-             break;
-         case "W":
-             this.MoveWest();
-             break;
-         case "N":
-             this.MoveNorth();
-             break;
-         case "S":
-             this.MoveSouth();
-             break;
-         case "B":
-             this.MoveBack();
-             break;
-       }
-       return false;
+        switch (choice) {
+            case "E":
+                this.MoveEast();
+                break;
+            case "W":
+                this.MoveWest();
+                break;
+            case "N":
+                this.MoveNorth();
+                break;
+            case "S":
+                this.MoveSouth();
+                break;
+            case "B":
+                this.MoveBack();
+                break;
+        }
+        return false;
     }
 
     private void startExitingGame(Character character) {
-     System.out.println("\n Return to the game");
-        }
+        System.out.println("\n Return to the game");
+    }
     MainMenuView mainMenuView = new MainMenuView()
-            mainMenuView.displayMainMenuView();  
+
+    mainMenuView.displayMainMenuView ();
 }

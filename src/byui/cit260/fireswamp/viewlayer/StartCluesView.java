@@ -14,24 +14,27 @@ import byui.cit260.fireswamp.control.GameControl;
  * @author kellyjohnson
  */
 public class StartCluesView {
-    
+
     public void displayCluesView() {
-        
-        boolean done = false; 
-        
+
+        boolean done = false;
+
         do {
             String clueOption = this.getClueOption();
             if (clueOption.toUpperCase().equals("Q")) // user wants to quit
+            {
                 return; // exit the game
-            
+            }
             done = this.doAction(clueOption);
-            
+
         } while (!done);
-}
+    }
+
     private void displayBanner() {
         System.out.println(
-        "\n Welcome to the clue menu where you can use your eyes, ears and nose to search for clues.");
+                "\n Welcome to the clue menu where you can use your eyes, ears and nose to search for clues.");
     }
+
     public boolean doAction(String clueOption) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -52,13 +55,15 @@ public class StartCluesView {
         }
         return false;
     }
+
     private void displayNextView(Character character) {
         System.out.println("\n==============="
-        + "\n Welcome to the clue menu"
-        + "\n cChoose wisely!"
-        + "\n=============");
-        
+                + "\n Welcome to the clue menu"
+                + "\n cChoose wisely!"
+                + "\n=============");
+
         MainMenuView mainMenuView = new MainMenuView()
         mainMenuView.displayMainMenuView();
 
-    }
+    
+}
