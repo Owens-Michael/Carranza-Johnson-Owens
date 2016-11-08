@@ -12,24 +12,16 @@ import java.io.Serializable;
  * @author mnowe
  */
 public class RousTypeSceneControl implements Serializable {
-    
-    public double CalcHeightOfRous(double userAnswer, double length, double height, double potions){
+
+    public double calcHeightOfRous(double length) {
+
+        if (length <= 0 || length >= 10) {
+            return -1;
+        }
         
-       if (userAnswer > height) {
-               return 1;
+        double height = (length / 2.0) + 0.5;
+        return height;
+
     }
-       if (userAnswer < height && potions >= 1) {
-               potions--;
-           return 1;
-       }
-       if(userAnswer < height && potions < 1){
-           return 0;
-       }
-       
-        double rnglength = 1 + (int)(Math.random() * 15);
-        double Height = (rnglength/2.0)+0.5;
-        return Height;
-        
-    }
-    
+
 }
