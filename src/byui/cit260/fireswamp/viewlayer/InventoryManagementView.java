@@ -14,7 +14,7 @@ import byui.cit260.fireswamp.model.Scene;
  *
  * @author dayanacarranza
  */
-public class InventoryManagementView {
+public class InventoryManagementView extends View{
 
     public void displayInventoryManagementView() {
         boolean done = false;
@@ -36,6 +36,7 @@ public class InventoryManagementView {
 
     }
 
+    @Override
     public boolean doAction(String InventoryOption) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -61,6 +62,7 @@ public class InventoryManagementView {
 
         MainMenuView mainMenuView = new MainMenuView();
 
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
 
     }
+}

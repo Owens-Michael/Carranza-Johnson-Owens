@@ -13,13 +13,26 @@ import byui.cit260.fireswamp.control.GameControl;
  *
  * @author kellyjohnson
  */
-public class HelpMenuView {
+public class HelpMenuView extends View{
 
+    public HelpMenuView() {
+    super("\n"
+                  + "\n------------------"
+                  + "\n| Help Menu      |"
+                  + "\n------------------"
+                + "\nM - How to move"
+                + "\nI - Purpose of items"
+                + "\nC - Clues to discover dangers"
+                + "\nD - Description of obsticales"
+                + "\nR - Return to game"
+                + "\n-----------------");
+    }
+    
     private void startNewGame() {
         GameControl.createNewGame(FireSwamp.getCharacter());
 
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     public void displayMainMenuView() {
@@ -38,25 +51,9 @@ public class HelpMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private boolean doAction(String menuOption) {
+    @Override
+    public boolean doAction(String menuOption) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 
-private String menu;
-    
-    public MainMenuView() {
-        this.menu = "\n"
-                  + "\n------------------"
-                  + "\n| Help Menu      |"
-                  + "\n------------------"
-                + "\nM - How to move"
-                + "\nI - Purpose of items"
-                + "\nC - Clues to discover dangers"
-                + "\nD - Description of obsticales"
-                + "\nR - Return to game"
-                + "\n-----------------";
-    }
-   
-    
-}

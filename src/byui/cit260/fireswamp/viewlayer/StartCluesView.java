@@ -13,7 +13,7 @@ import byui.cit260.fireswamp.control.GameControl;
  *
  * @author kellyjohnson
  */
-public class StartCluesView {
+public class StartCluesView extends View {
 
     public void displayCluesView() {
 
@@ -35,6 +35,7 @@ public class StartCluesView {
                 "\n Welcome to the clue menu where you can use your eyes, ears and nose to search for clues.");
     }
 
+    @Override
     public boolean doAction(String clueOption) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -62,8 +63,10 @@ public class StartCluesView {
                 + "\n cChoose wisely!"
                 + "\n=============");
 
-        MainMenuView mainMenuView = new MainMenuView()
-        mainMenuView.displayMainMenuView();
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
 
     
+    }
+
 }

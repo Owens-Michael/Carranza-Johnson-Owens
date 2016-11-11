@@ -13,7 +13,7 @@ import byui.cit260.fireswamp.control.GameControl;
  *
  * @author dayanacarranza
  */
-public class MovementView {
+public class MovementView extends View {
 
     public void MovementView() {
 
@@ -37,6 +37,7 @@ public class MovementView {
 
     }
 
+    @Override
     public boolean doAction(String movementOption) {
         choice = choice.topUpperCase();
         switch (choice) {
@@ -62,7 +63,7 @@ public class MovementView {
     private void startExitingGame(Character character) {
         System.out.println("\n Return to the game");
     }
-    MainMenuView mainMenuView = new MainMenuView()
+    MainMenuView mainMenuView = new MainMenuView();
 
-    mainMenuView.displayMainMenuView ();
+    mainMenuView.display();
 }

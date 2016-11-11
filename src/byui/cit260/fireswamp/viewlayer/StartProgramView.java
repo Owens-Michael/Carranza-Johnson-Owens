@@ -13,7 +13,7 @@ import byui.cit260.fireswamp.control.GameControl;
  *
  * @author kellyjohnson
  */
-public class StartProgramView {
+public class StartProgramView extends View{
 
     private String promptMessage;
 
@@ -69,7 +69,8 @@ public class StartProgramView {
         return value;
     }
 
-    private boolean doAction(String name) {
+    @Override
+    public boolean doAction(String name) {
         if (name.length() < 2) {
             System.out.println("\nInvalid players name: " + "The name must be greater than one character in length");
             return false;
