@@ -5,13 +5,12 @@
  */
 package byui.cit260.fireswamp.control;
 
-import static java.lang.Math.random;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author dayanacarranza
+ * @author michaelowens
  */
 public class RousTypeSceneControlTest {
     
@@ -19,85 +18,52 @@ public class RousTypeSceneControlTest {
     }
 
     /**
-     * Test of CalcHeightOfRous method, of class RousTypeSceneControl.
+     * Test of calcHeightOfRous method, of class RousTypeSceneControl.
      */
     @Test
     public void testCalcHeightOfRous() {
-        System.out.println("CalcHeightOfRous");
-        double userAnswer = 2.5;
+        System.out.println("calcHeightOfRous");
         double length = 4.0;
-        double height = 2.5;
-        double potions = 3.0;
         RousTypeSceneControl instance = new RousTypeSceneControl();
-        String expResult = "correct";
-        double result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
-   
+        double expResult = 2.5;
+        double result = instance.calcHeightOfRous(length);
+        assertEquals(expResult, result, 0.1);
+        
+        System.out.println("\tTest 2");
     
-    System.out.println("\tTest 2");
+        length = 9;
+        
+        expResult = 5.0;
+        
+        result = instance.calcHeightOfRous(length);
+        assertEquals(expResult, result, 0.01);
+        
+        System.out.println("\tTest 3");
     
-        userAnswer = 10.00;
+        length = 0;
         
-        length = 5.00;
+        expResult = -1.0;
         
-        potions = 1.0;
-        
-        expResult = "incorrect";
-        
-        result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
-        
-    System.out.println("\tTest 3");
-    
-        userAnswer = 3.0;
-        
-        length = 8.0;
-        
-        potions = 0.0;
-        
-        expResult = "incorrect and you die";
-        
-        result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
+        result = instance.calcHeightOfRous(length);
+        assertEquals(expResult, result, 0.01);
         
         System.out.println("\tTest 4");
     
-        userAnswer = 5.0;
+        length = 10;
         
-        length = 9.0;
+        expResult = -1.0;
         
-        potions = 5.0;
-        
-        expResult = "correct";
-        
-        result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
-       
+        result = instance.calcHeightOfRous(length);
+        assertEquals(expResult, result, 0.01);
+    
         System.out.println("\tTest 5");
     
-        userAnswer = 2.0;
+        length = 5;
         
-        length = 14.0;
+        expResult = 3.0;
         
-        potions = 0.0;
-        
-        expResult = "incorrect and you die";
-        
-        result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
-        
-        System.out.println("\tTest 6");
+        result = instance.calcHeightOfRous(length);
+        assertEquals(expResult, result, 0.01);
+    }
     
-        userAnswer = 6.5;
-        
-        length = 12.0;
-        
-        potions = 6.0;
-        
-        expResult = "correct";
-        
-        result = instance.CalcHeightOfRous(userAnswer, length, height, potions);
-        assertEquals(expResult, result, 1.0);
-       
-}
 }

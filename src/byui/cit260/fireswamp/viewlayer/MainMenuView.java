@@ -5,45 +5,48 @@
  */
 package byui.cit260.fireswamp.viewlayer;
 
-import java.util.Scanner;
-
 /**
  *
  * @author kellyjohnson
  */
-public class MainMenuView extends View {
-
-    public MainMenuView() {
-        super("\n"
-                + "\n------------------"
-                + "\n| Main Menu      |"
-                + "\n------------------"
-                + "\nN - Start new game"
-                + "\nG - Get and start saved game"
-                + "\nH - get help on how to play the game"
-                + "\nS - Save game"
-                + "\nQ - Quit"
-                + "\n-----------------");
+public class MainMenuView //extends View { {
+{ 
+    void displayMainMenuView() {
+        System.out.println("\n*** displayMenu() function called**");
     }
-    @Override
-    public boolean doAction(String input) {
-        
-        char value = input.charAt(0);
-        
-        switch(value) {
-            case 'N':
-                newGame();
-                break;
-            case 'Q':
-                return true;
-        }
-        
-        return false;
-    }
-
-    private void newGame() {
-        GameMenuView gmv = new GameMenuView();
-        gmv.display();
-    }
-    
 }
+
+    // public class MainMenuView() {
+    //    super("\n"
+      //          + "\n-------------------------------"
+        //        + "\n| Survive the Fire Swamp      |"
+          //      + "\n-------------------------------"
+            //    + "\nN - Start new game"
+             //   + "\nG - Get and start saved game"
+           //     + "\nH - Help"
+         //       + "\nS - Save game"
+       //         + "\nQ - Quit"
+     //           + "\n-------------------------------");
+   // }
+   // @Override
+   // public boolean doAction(String input) {
+        
+   //     char value = input.charAt(0);
+        
+     //   switch(value) {
+       //     case 'N':
+         //       newGame();
+           //     break;
+          //  case 'Q':
+            //    return true;
+      //  }
+        
+     //   return false;
+  //  }
+
+  //  private void newGame() {
+    //    GameMenuView gmv = new GameMenuView();
+      //  gmv.display();
+  //  }
+    
+//}

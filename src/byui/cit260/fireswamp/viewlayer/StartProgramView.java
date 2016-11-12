@@ -23,24 +23,37 @@ public class StartProgramView extends View{
 
     }
 
-    private void displayBanner() {
-        System.out.println(
-                "\nThe fire swamp of Florin is famous for being deadly to all who enter. You are being\n" + "\n" + "pursued by enemies and they have driven you toward the fire swamp. You have no choice but\n" + "\n" + "to take your chances in the swamp in order to escape. The swamp is dark and musty, with no\n"
-                + "\n" + "visible path. As you enter, you feel your heart beat faster with fear.\n"
-                + "\n" + "This game recreates the fire swamp on a grid, with hazards on some squares and helpful items\n" + "\n" + "on others, placed randomly. As you travel through the swamp, you can pick up helpful items,\n" + "\n" + "and when you land on a square with a hazard, you will have to answer a math question to pass\n" + "\n" + "through safely. If you do not answer the question correctly, you will need to have a helpful item\n"
-                + "\n" + "in your inventory that matches the hazard in order to be safe. If you do not, you will perish in\n" + "\n" + "the fire swamp."
+    public void displayBanner() {
+        System.out.println( 
+                    "\n*************************************************************************"
+                   +"\n*                                                                       *"
+                   +"\n* The fire swamp of Florin is famous for being deadly to all who enter. *"
+                   +"\n* You are being pursued by enemies and they have driven you toward the  *"
+                   +"\n* fire swamp. You have no choice but to take your chances in the swamp  *"
+                   +"\n* in order to escape. The swamp is dark and musty, with no visible path.*"
+                   +"\n* As you enter, you feel your heart beat faster with fear.              *"
+                   +"\n*                                                                       *"         
+                   +"\n* This game recreates the fire swamp on a grid, with hazards on some    *"
+                   +"\n* squares and helpful items on others, placed randomly. As you travel   *"
+                   +"\n* through the swamp, you can pick up helpful items, and when you land   *"
+                   +"\n* on a square with a hazard, you will have to answer a math question to *"
+                   +"\n* pass through safely. If you do not answer the question correctly, you *"
+                   +"\n* will need to have a helpful item in your inventory that matches the   *"
+                   +"\n* hazard in order to be safe. If you do not, you will perish in the     *"
+                   +"\n* fire swamp.                                                           *"
+                   +"\n*                                                                       *"
+                   +"\n*************************************************************************"
         );
     }
 
     public void displayStartProgramView() {
-
+        
         boolean done = false;
-
         do {
             String charactersName = this.getCharactersName();
-            if (charactersName.toUpperCase().equals("Q")) {
+            if (charactersName.toUpperCase().equals("Q")) 
                 return;
-            }
+            
 
             done = this.doAction(charactersName);
 
@@ -72,26 +85,31 @@ public class StartProgramView extends View{
     @Override
     public boolean doAction(String name) {
         if (name.length() < 2) {
-            System.out.println("\nInvalid players name: " + "The name must be greater than one character in length");
+            System.out.println("\nInvalid players name: " 
+                    + "The name must be greater than one character in length");
             return false;
         }
         Character character = GameControl.createCharacter(name);
+        
         if (character == null) {
-            System.out.println("\n*** doAction() called ***");
+            System.out.println("\nError creating the player.");
             return false;
         }
         this.displayNextView(character);
+        
         return true;
     }
 
     private void displayNextView(Character character) {
-        System.out.println("\n==============="
-                + "\n Welcome to the game "
-                + "\n We hope you have a lot of fun!"
-                + "\n=============");
+        System.out.println(
+                  "\n===================================="
+                + "\n Welcome to the game " + character.getName()
+                + "\n Watch your step in the Fire Swamp!"
+                + "\n====================================");
 
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
+        
+        mainMenuView.displayMainMenuView();
 
     }
 

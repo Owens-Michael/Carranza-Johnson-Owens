@@ -12,12 +12,14 @@ import byui.cit260.fireswamp.viewlayer.StartProgramView;
  * @author kellyjohnson
  */
 public class FireSwamp {
+   
     private static Game currentGame = null;
     private static Character character = null;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
 

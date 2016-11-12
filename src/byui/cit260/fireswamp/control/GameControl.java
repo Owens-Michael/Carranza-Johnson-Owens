@@ -12,7 +12,9 @@ import byui.cit260.fireswamp.model.Character;
  * @author kellyjohnson
  */
 public class GameControl {
+    
     public static Character createCharacter(String name) {
+        
         if (name == null) {
             return null;
          }
