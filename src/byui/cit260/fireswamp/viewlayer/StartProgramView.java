@@ -92,7 +92,7 @@ public class StartProgramView extends View{
         Character character = GameControl.createCharacter(name);
         
         if (character == null) {
-            System.out.println("\nError creating the player.");
+            System.out.println("\nTry again. Your name isn't a secret, so feel free to share it or make one up for your player");
             return false;
         }
         this.displayNextView(character);
