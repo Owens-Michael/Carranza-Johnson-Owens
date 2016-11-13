@@ -74,7 +74,7 @@ public class StartProgramView extends View{
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvlaid value: can not be blank");
+                System.out.println("\nTry again. Your name isn't a secret, so feel free to share it or make one up for your player");
                 continue;
             }
             break;
@@ -92,7 +92,7 @@ public class StartProgramView extends View{
         Character character = GameControl.createCharacter(name);
         
         if (character == null) {
-            System.out.println("\nTry again. Your name isn't a secret, so feel free to share it or make one up for your player");
+            System.out.println("\nError creating the player.");
             return false;
         }
         this.displayNextView(character);
