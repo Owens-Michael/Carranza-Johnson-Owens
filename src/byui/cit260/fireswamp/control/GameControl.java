@@ -29,7 +29,6 @@ public class GameControl {
     
 }
 private void createAndAssignItems(Map map) {
-    // need to import the Item
     List<Item> items = new ArrayList<>();
     
     Item rope = new Item();
