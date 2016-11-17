@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.fireSwamp.model;
+package byui.cit260.fireswamp.model;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -14,29 +14,44 @@ import java.util.Objects;
  */
 public class Location implements Serializable {
     
-    private String row;
-    private String column;
-    private double visited;
+    private int row;
+    private int column;
+    private boolean visited;
     private double amountRemaining;
+    private LocationType locationType;
+    private Item item;
 
     public Location() {
     }
-    
+    public LocationType getLocationType() {
+        return locationType;
+    }
+    public void setLocationType(LocationType locationType) {
+        this.locationType = locationType;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
     
 
-    public String getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(String row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public String getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(String column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 

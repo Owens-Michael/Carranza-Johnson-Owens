@@ -3,24 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CITtwosixtyFireSwamp;
+package byui.cit260.fireswamp.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Arrays;
 
 /**
  *
- * @author dayanacarranza
+ * @author Michael and Kelly
  */
 public class Game implements Serializable{
-   
-    
+   // NEW: gameMap, getCharacter, gameItemList. add code beneath for these
+    private Map gameMap;
+    private Character getCharacter;
+    private Item[] gameItemList;
     private String totalTime;
     private String noPeople;
 
     public Game() {
     }
-
+    //getters and setters
+    
     public String getTotalTime() {
         return totalTime;
     }

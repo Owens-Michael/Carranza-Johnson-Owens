@@ -3,23 +3,56 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CITtwosixtyFireSwamp;
+package byui.cit260.fireswamp.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  *
- * @author dayanacarranza
+ * @author Michael and Kelly
  */
 public class Map implements Serializable{
     
-    private String rowCount;
-    private String columnCount;
+    public static final int ROWS = 5;
+    public static final int COLUMNS = 5;
+    private Location[][] matrix = new Location[ROWS][COLUMNS];
+    private Location mapEntrance;
+    private Location mapExit;
+    
+    //private String rowCount;
+    //private String columnCount;
 
     public Map() {
     }
 
+    public void init() {
+        Random rand = new Random();
+            for(int row = 0; row < ROWS; row++) {
+            for(int col = 0; col < COLUMNS; col++) {
+               int randLocation = rand.nextInt(LocationType.values().length);
+                Location location = new Location();
+                location.setLocationColumn(col);
+                location.setLocationRow(row);
+                location.setLocationVisited(false);
+                
+
+                
+                location.setLocationType(LocationType.values()[randLocation]);
+                
+                matrix[row][col] = location;
+            }
+        }
+    }
+    public Location getLocationAt(int row, int col) {
+        return matrix[ro]
+    }
+    
+    
+    public Location getMapEntrance() {
+        return mapEntrance;
+    }
     /**
      *
      * @return
