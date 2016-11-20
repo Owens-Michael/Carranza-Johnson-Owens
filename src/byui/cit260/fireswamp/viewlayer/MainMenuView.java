@@ -53,9 +53,6 @@ public MainMenuView extends View () {
            System.exit(0);
         }
         private void startNewGame() {
-            GameControl gc = new GameControl();
-            gc.createNewGame(FireSwamp.getCharacter());
-            GameMenuView gameMenu = new GameMenuView();
-            game.display();
-}
+            GameControl gc = new GameControl(); gc.createNewGame(FireSwamp.getCharacter()); GameMenuView gameMenu = new GameMenuView(); game.display();
+            }
 }

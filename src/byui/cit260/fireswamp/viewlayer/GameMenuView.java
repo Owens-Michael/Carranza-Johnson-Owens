@@ -8,7 +8,7 @@ package byui.cit260.fireswamp.viewlayer;
 import byui.cit260.fireswamp.model.Map;
 import fireswamp.FireSwamp;
 import java.util.Scanner;
-
+import outcome.Lose;
 /**
  *
  * @author kellyjohnson
@@ -106,6 +106,7 @@ public class GameMenuView extends View {
           }
         }
     private void look() {
+        
         System.out.println("*** look() function called");
     }
         private void listen() {
@@ -118,16 +119,28 @@ public class GameMenuView extends View {
         System.out.println("*** takeItem() function called");
     }
     private void moveNorth() {
-        System.out.println("*** moveNorth() function called");
+        MoveControl moveControl = new MoveControl();
+        if(moveControl.moveNorth(FireSwamp.getGame()) == false) {
+            console.println("Sorry, try another direction");
+            throw new LoseGame("After all that?! Try again. Never give up. Never surrender!");
     }
     private void moveEast() {
-        System.out.println("*** moveEast() function called");
+        MoveControl moveControl = new MoveControl();
+        if(moveControl.moveEast(FireSwamp.getGame()) == false) {
+            console.println("That move is illegal. If you try that again I'll send the Rodents of unusual size after you.");
+        }
     }
     private void moveSouth() {
-        System.out.println("*** moveSouth() function called");
+        MoveControl moveControl = new MoveControl();
+        if(moveControl.moveSouth(FireSwamp.getGame()) == false) {
+            console.println("That move is illegal. If you try that again He really will cut the rope you and send you too your doom off the clifs of Insanity.");
+        }
     }
     private void moveWest() {
-        System.out.println("*** moveWest() function called");
+        MoveControl moveControl = new MoveControl();
+        if(moveControl.moveWast(FireSwamp.getGame()) == false) {
+            console.println("That move is illegal. If you try that again I'll make sure the shreeking eels are hungry this time");
+        }
     }
     private void saveGame() {
         System.out.println("*** saveGame() function called");
@@ -135,6 +148,9 @@ public class GameMenuView extends View {
     private void help() {
         System.out.println("*** help() function called");
     }
+    private void displayMap(){
+        console.println(FirewSwamp.getGame().getMap().getMapString());
+}
     private void back() {
         System.out.println("*** back() function called");
     }

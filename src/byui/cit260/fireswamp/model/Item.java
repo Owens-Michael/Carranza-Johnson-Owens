@@ -6,6 +6,7 @@
 package byui.cit260.fireswamp.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -13,7 +14,10 @@ import java.util.Objects;
  * @author dayanacarranza
  */
 public class Item implements Serializable{
-   
+
+    private static String Rope;
+    private static String Potion;
+    private static String Extinguisher;
     
     private String inventoryType;
     private Double quantityInStock;
@@ -71,6 +75,29 @@ public class Item implements Serializable{
     public String toString() {
         return "Item{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock +'}';
     }
-            
-    
+    public static void main(String[] arg) {
+       
+       ArrayList<String> Item;
+        Item = new ArrayList<>();
+            Item.add(Potion);
+            Item.add(Rope);
+            Item.add(Extinguisher);
+          System.out.println("My Items: ");
+          Item.forEach((i) -> {
+              System.out.println(i);
+        });  
+                 
+    }       
+
+    public void setItemDescription(String a_heal_all_Potion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setItemName(String potion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setQuantity(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

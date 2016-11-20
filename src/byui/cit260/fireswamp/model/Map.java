@@ -104,5 +104,5 @@ public class Map implements Serializable{
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
 
- 
+ public class StartingLocation ()
 }    

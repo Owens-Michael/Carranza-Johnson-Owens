@@ -72,5 +72,17 @@ public class Game implements Serializable{
         return "Game{" + "totalTime=" + totalTime + ", noPeople=" + noPeople + '}';
     }
     
+    public Character getCharacter() {
+        return character;
+    }
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
     
+    public Map getMap() {
+        return map;
+    }
+    public void setMap(Map map) {
+        this.map = map;
+    }
 }
